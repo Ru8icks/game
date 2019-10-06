@@ -18,6 +18,7 @@ export class GameComponent implements OnInit {
   private currentPlayer: string;
   private winner: boolean;
   private winningPlayer: string;
+  status: boolean;
 
 
   constructor(private gameService: GameService,

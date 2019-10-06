@@ -1,0 +1,23 @@
+.line {
+  position: absolute;
+  height:2px;
+  width:0;
+
+  background:yellow;
+  transform:rotate(-45deg);
+  transform-origin:center;
+  animation:grow 1s linear forwards;
+}
+.line::before {
+  content: "";
+  position: absolute;
+  height:2px;
+  width:0;
+  background:yellow;
+  transform:rotate(90deg);
+  transform-origin:center;
+  animation:grow 1s linear forwards;
+}
+@keyframes grow{
+  to {width:25px;}
+}

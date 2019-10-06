@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { GameComponent } from './game/game.component';
 import { CircleComponent } from './circle/circle.component';
+import { SlashComponent } from './slash/slash.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { CircleComponent } from './circle/circle.component';
     AppComponent,
     GameComponent,
     CircleComponent,
+    SlashComponent,
   ],
   imports: [
     BrowserModule,
