@@ -1,0 +1,24 @@
+<div *ngIf="!clicked" >
+  <button class="btn btn-outline-warning menu-btn" (click)="newRoom()"> Create Game </button>
+  <div  *ngFor="let room of availableRooms ">
+    <button class="btn btn-outline-warning menu-btn" (click)="joinRoom(room)">Join Game</button>
+  </div>
+</div>
+
+<span *ngIf="clicked && board === undefined" class="spinner spinner-1">Please wait</span>
+
+<div class="tictac" *ngIf="clicked && !winner" >
+
+
+
+  <div  *ngFor="let space of board; let i = index" >
+    <div class="tictacbutton" (click)="clickedMe(i)">{{space}}</div>
+  </div>
+
+
+</div>
+<div class="" *ngIf="winningPlayer">
+  <p> {{winningPlayer}} is the winner!! </p>
+  <button (click)="rematch()" class="btn btn-outline-warning menu-btn">Rematch</button>
+</div>
+<app-circle></app-circle>
